@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archslate Website - Abhiram</title>
+    <!-- Add CSS and JavaScript links here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" id="toggle-sidebar" >
+            <img src="data:image/png;base64,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" alt="Company Logo">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <i class="fas fa-search"></i>
+        </div>
+    
+        <div class="user">
+            <i class="fas fa-bell"></i>
+            <span id="user-email">Hello Guest</span>
+            <a href="auth.html"><span id="sign-in-btn">Sign In</span></a>
+            <a href="auth.html"><span id="sign-out-btn" style="display: none;">Sign Out</span></a>
+
+        </div>
+    </header>
+
+   
+    <main class="main-content" id="main-content" style="display: none;">
+        
+        <h1>New York High Rise/ Task</h1>
+        <!-- Div 1 -->
+        <div class="content-div" id="div1">
+            <div id="div1-firstline" class="flex-container">
+            <h1 id="div1-heading" class="flex-item">Create Architectural Concepts</h1>
+            <div class="flex-item">
+            <button id="div1-button1">Edit Task</button>
+            <button id="div1-button2">End Task</button>
+            <div id="status-label" style="display:none;"></div>
+            </div>
+            </div>
+            
+            
+        </div>
+
+        <!-- Div 2 -->
+        <div class="content-div" id="div2">
+            <h1 id="div2-heading">Documents</h1>
+            <div>
+            <label for="file">Attach Files :</label>
+            <input type="file" id="file" name="file" multiple>
+            </div>
+            <div id="file-list">
+                <!-- File information will be displayed here -->
+            </div>
+        </div>
+
+        <!-- Div 3 -->
+        <div class="content-div" id="div3">
+            
+            <div class="update-section">
+                <h1>Post an Update</h1>
+                <textarea id="post-update-textarea" rows="4" placeholder="Enter your update..."></textarea>
+                <button id="post-update-button" value="Post Update">Post Update</button>
+            </div>
+            <!-- Update Status Section -->
+         <div class="status-section">
+           <h1>Update Status</h1>
+           <button id="status-button1" value="Complete">Complete</button>
+           <button id="status-button2" value="In Progress">In Progress</button>
+           <button id="status-button3" value="Stuck">Stuck</button>
+           <button id="status-button4" value="Not Started">Not Started</button>
+         </div>
+
+            
+        </div>
+
+        <!-- Div 4 -->
+        <div class="content-div" id="div4">
+            <h1 class="flex-item">Activity</h1>
+            
+        </div>
+    </main>
+
+    <!-- ... (existing HTML code) ... -->
+
+<main class="main-content" id="main-content1" style="display: none;">
+    <h2>New York High Rise/ Edit Task</h2>
+    <!-- Add a placeholder for the task creation form -->
+    <div class="content-div" id="task-form-div" >
+        <h2>Create Architectural Concepts</h2>
+        <form id="task-form">
+            <!-- Title -->
+            <div id="title-div">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="assign-to">Assign To:</label>
+            <input type="text" id="assign-to" name="assign-to" placeholder="Enter names and press Enter">
+            <div id="valuesContainer">
+                <!-- Added values will appear here -->
+            </div>
+            </div>
+
+            <!-- Due Date -->
+            <div id="duedate-div">
+            <label for="due-date">Due Date:</label>
+            <input type="date" id="due-date" name="due-date" required>
+
+            <!-- Priority -->
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+                <option value="top">Top</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <!-- Attached to Project -->
+            <label for="attached-to-project">Attached to Project:</label>
+            <select id="attached-to-project" name="attached-to-project">
+                <option value="New York High Rise">New York High Rise</option>
+                <option value="22nd st">22nd St</option>
+                <option value="Not attached to a project">Not attached to a project</option>
+            </select>
+            </div>
+             <div id="view-div">
+            <!-- Who Can View -->
+            <label for="who-can-view">Who Can View:</label>
+            <input type="text" id="who-can-view" name="who-can-view" placeholder="Enter names and press Enter">
+            <div id="valuesContainer1">
+                <!-- Added values will appear here -->
+            </div>
+             </div>
+            <!-- Description -->
+            <div id="desc-div">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <button type="button" id="cancel-button">Cancel</button>
+            <button type="submit" id="save-button">Save</button>
+        </form>
+    </div>
+
+    <!-- ... (existing content-div elements) ... -->
+</main>
+
+<!-- ... (existing HTML code) ... -->
+
+    
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#" onclick="toggleMainContent('main-content')"><i class="fas fa-folder"></i> Projects</a></li>
+            <li><a href="#" onclick="toggleMainContent('main-content1')"><i class="fas fa-tasks"></i> Tasks</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> People</a></li>
+            <li><a href="#"><i class="fas fa-user-tie"></i> Hiring</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+    </aside>
+    
+    
+    <!-- Rest of your website content goes here -->
+    <script src="script.js"></script>
+    <script>
+        // Check if the user is signed in by looking for their email in local storage or cookies
+        const userEmail = localStorage.getItem('userEmail'); // You should set this when the user signs in
+        
+        const signInButton = document.getElementById('sign-in-btn');
+        const signOutButton = document.getElementById('sign-out-btn');
+        const userEmailElement = document.getElementById('user-email');
+        const Message=document.getElementById('message');
+
+        if (userEmail) {
+            // User is signed in, show their email and the Sign Out button
+            userEmailElement.textContent = 'Hello ' + userEmail;
+            signInButton.style.display = 'none';
+            signOutButton.style.display = 'inline';
+            
+        } else {
+            // User is not signed in, show the default text and the Sign In button
+            userEmailElement.textContent = 'Hello Guest';
+            signInButton.style.display = 'inline';
+            signOutButton.style.display = 'none';
+            
+        }
+
+        // Add an event listener to the Sign Out button to clear user data when clicked
+        signOutButton.addEventListener('click', () => {
+            // Clear user data (you may also want to sign the user out from Firebase)
+            localStorage.removeItem('userEmail');
+            // Redirect the user to the sign-in page or do any other necessary actions
+            window.location.href = 'auth.html'; // Redirect to your sign-in page
+        });
+    </script>
+    <script>
+        // Function to toggle the visibility of the main content
+        function toggleMainContent(mainContentId) {
+            const mainContent = document.getElementById(mainContentId);
+    
+            if (mainContent.style.display === 'none' || mainContent.style.display === '') {
+                mainContent.style.display = 'block';
+            } else {
+                mainContent.style.display = 'none';
+            }
+        }
+    </script>
+    <script>
+        // Function to toggle the visibility of the main content
+        function toggleMainContent(mainContent1Id) {
+            const mainContent1 = document.getElementById(mainContent1Id);
+    
+            if (mainContent1.style.display === 'none' || mainContent1.style.display === '') {
+                mainContent1.style.display = 'block';
+            } else {
+                mainContent1.style.display = 'none';
+            }
+        }
+    </script>
+    
+   
+    
+
+</body>
+</html>

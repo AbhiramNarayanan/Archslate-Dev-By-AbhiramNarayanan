@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Authentication</title>
+        <link rel="stylesheet" href="auth.css">
+    </head>
+    <body>
+        <div class="logo">
+            <a href="index.html">
+            <img src="https://cdn.b12.io/client_media/CNWxr4o8/774d3f68-bce8-11ec-bde2-0242ac110003-png-regular_image.png" alt="Company Logo">
+            </a>
+        </div>
+        <div id="login_div">
+            <h2 id="user_para">Hello, User!</h2>
+            <input type="email" id="email_field" placeholder="Email">
+            <input type="password" id="password_field" placeholder="Password">
+            <button id="signIn">Sign In</button>
+            <button id="signUp">Create Account</button>
+        </div>
+       
+        <script src="auth.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+            import { getDatabase } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+            import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+            
+            
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyCVYtxul-f2LRw_RNiBTcm9kFvFyynSyDA",
+              authDomain: "archslate-website-abhiram.firebaseapp.com",
+              databaseURL: "https://archslate-website-abhiram-default-rtdb.asia-southeast1.firebasedatabase.app",
+              projectId: "archslate-website-abhiram",
+              storageBucket: "archslate-website-abhiram.appspot.com",
+              messagingSenderId: "344579200623",
+              appId: "1:344579200623:web:1145e4eb5536b9d079df9a"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const database=getDatabase(app);
+            const auth = getAuth();
+
+            signUp.addEventListener('click',(e)=>{
+
+                var email = document.getElementById('email_field').value;
+                var password = document.getElementById('password_field').value;
+                
+
+                createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    localStorage.setItem('userEmail', email);
+                    window.location.href = 'index.html';
+
+                    // ...
+                })
+                .catch((error) => {
+                     alert(error.message);
+                    // ..
+                });
+            })
+
+            signIn.addEventListener('click',(e)=>{
+                var email = document.getElementById('email_field').value;
+                var password = document.getElementById('password_field').value;
+                signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    localStorage.setItem('userEmail', email);
+                    window.location.href = 'index.html';
+                     // ...
+                    })
+                    .catch((error) => {
+                        alert(error.message);
+                    });
+               
+            })
+
+        
+
+
+          </script>
+    </body>
+</html>

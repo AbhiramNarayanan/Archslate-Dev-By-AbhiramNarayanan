@@ -1,0 +1,483 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue}
+
+/* Style the navbar */
+.navbar {
+    background-color: white;
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.logo {
+    margin-right: 20px;
+}
+
+
+.logo img {
+    max-height: 40px;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.search i{
+    cursor: pointer;
+}
+
+.search input {
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    margin-right: 10px;
+    width: 400px;
+}
+
+
+.user {
+    font-size: 20px;
+    margin-right: 10px;
+    display: inline;
+    
+}
+.user a{
+    text-decoration: none;
+    font-size: 16px;
+}
+#user-email{
+    margin-right: 10px;
+}
+
+
+/* Style icons (you'll need to include the Font Awesome library) */
+.fas {
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 9px;
+
+}
+
+/* Style the sign-out button */
+#sign-in-btn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    
+}
+#sign-out-btn{
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+   
+
+}
+
+
+
+
+/* Style the sidebar */
+.sidebar {
+    background-color: white;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    left: -250px;
+    transition: left 0.3s;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 0;
+}
+
+/* Style sidebar links and icons */
+.sidebar a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+/* Style sidebar links on hover */
+.sidebar a:hover {
+    background-color: black;
+    color: white;
+}
+.sidebar a:hover .fas {
+    color: white;
+}
+
+
+
+
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    
+    
+}
+
+/* Common title style */
+.main-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 270px;
+    
+}
+
+/* Content divs */
+.content-div {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allows divs to grow and occupy available space */
+    margin-left: 270px;
+    margin-right: 20px;
+    border-radius: 15px;
+    
+}
+#div1{
+    height: 300px;
+    overflow: auto;
+}
+#div2{
+    height:150px;
+    overflow: auto;
+}
+#div3{
+    height:230px;
+    overflow: auto;
+}
+#div4{
+    height:150px;
+    overflow: auto;
+}
+#status-label{
+    margin-top: 30px;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-right: 50px;
+   
+}
+
+
+
+
+
+.content-div{
+    height: 500px;
+    margin: 20px;
+    margin-left: 270px;
+    overflow: auto;
+}
+
+
+
+ /* Style the heading */
+ .content-div h2 {
+    color: black; /* Set the heading color to black */
+   
+}
+
+/* Style the labels */
+.content-div label {
+    color: black; /* Set label text color to black */
+    font-size: 20px;
+}
+
+/* Style the input and select elements */
+.content-div input[type="text"],
+.content-div input[type="date"],
+.content-div select {
+    color: black; /* Set input text and select text color to black */
+    border: 1px solid black; /* Add black border to input and select elements */
+    background-color: white; /* Set background color to white */
+}
+
+/* Style the textarea */
+.content-div textarea {
+    color: black; /* Set textarea text color to black */
+    border: 1px solid black; /* Add black border to textarea */
+    background-color: white; /* Set background color to white */
+}
+
+/* Style the buttons */
+.content-div button {
+    color: white; /* Set button text color to white */
+    background-color: black; /* Set button background color to black */
+    border: 1px solid black; /* Add black border to buttons */
+    padding: 5px 10px; /* Add padding to buttons for better appearance */
+    cursor: pointer; /* Add pointer cursor to buttons */
+}
+#title-div{
+    margin-bottom: 20px;
+}
+#title{
+    margin-right: 250px;
+    width: 200px;
+}
+#assign-to{
+    width: 200px;
+}
+#valuesContainer{
+    margin-left: 650px;
+}
+#valuesContainer1{
+    margin-left: 180px;
+}
+#main-content1 h2{
+    margin-left: 270px;
+
+}
+#who-can-view{
+    width: 200px;
+}
+#duedate-div{
+    margin-bottom: 20px;
+}
+#due-date{
+    margin-right: 250px;
+}
+#priority{
+    margin-right: 250px;
+}
+#view-div{
+    margin-bottom: 20px;
+}
+#desc-div{
+    margin-bottom: 30px;
+}
+#description{
+    width: 700px;
+    height: 200px;
+}
+#cancel-button{
+    margin-left: 500px;
+    margin-right: 30px;
+    width: 100px;
+    height: 40px;
+    
+}
+#save-button{
+    width: 100px;
+    height: 40px;
+}
+
+
+
+/* Add this CSS to style the close (cross) icon */
+.close-icon {
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+
+
+
+/* Add this CSS to your existing styles.css or create a new one if not already present */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-item {
+    margin: 0;
+    
+}
+#div1-button1{
+    margin-right: 8px;
+    border-radius: 15px;
+}
+#div1-button2{
+    border-radius: 15px;
+}
+#div1-button1:hover{
+    background-color: white;
+    color: black;
+}
+#div1-button2:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+/* Add this CSS to your existing styles.css file or in a <style> tag in your HTML */
+.file-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.file-heading {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.file-info {
+    margin-bottom: 5px;
+}
+
+#div3-headings{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+
+.div3-headings h1 {
+    display: inline;
+}
+
+/* Style for the Post Update and Update Status sections */
+.update-section, .status-section {
+    margin-top: 20px; /* Add spacing between sections */
+}
+
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 5px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    
+    
+}
+#status-button1{
+    margin-right: 10px;
+    margin-left: 150px;
+}
+#status-button2{
+    margin-right: 10px;
+}
+#status-button3{
+    margin-right: 10px;
+}
+
+#post-update-button:hover{
+    background-color: white;
+    color: black;
+    
+}
+#status-button1:focus{
+    background-color: rgba(0, 128, 0, 0.464);
+    color: black;
+}
+#status-button2:focus{
+    background-color: rgba(0, 128, 0, 0.464);
+    color: black;
+}
+#status-button3:focus{
+    background-color: rgba(0, 128, 0, 0.464);
+    color: black;
+}
+#status-button4:focus{
+    background-color: rgba(0, 128, 0, 0.464);
+    color: black;
+}
+#cancel-button:focus{
+    background-color: white;
+    color: black;
+}
+#save-button:focus{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+/* CSS to style label-value pairs */
+.label-value {
+    display: inline-block; /* Use inline-block for inline display with block-level styling */
+    margin-right: 20px; /* Add spacing between label-value pairs */
+}
+
+/* Apply specific styles to each label */
+.label-value h3 {
+    font-weight: bold;
+}
+
+/* Apply specific styles to each value */
+.label-value p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
